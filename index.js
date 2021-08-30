@@ -20,6 +20,7 @@ app.get('/quotes', function(req, res){
     quotes.get(res)
 });
 
-app.listen(process.env.PORT, function(){
-    console.log('listening on :', PORT);
+const port = process.env.PORT
+app.listen(port, function(){
+    console.log('listening on :', port);
 });

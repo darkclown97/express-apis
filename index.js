@@ -12,7 +12,6 @@ app.use(function(req, res, next) {
     // Handles preflight request for CORS
     if (req.method.toLowerCase() === 'options')
       return res.sendStatus(200)
-    console.log(req)
     next()
 });
 
@@ -20,7 +19,7 @@ app.get('/quotes', function(req, res){
     quotes.get(res)
 });
 
-const port = process.env.PORT
+const port = 3000
 app.listen(port, function(){
     console.log('listening on :', port);
 });
